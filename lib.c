@@ -1,5 +1,6 @@
 #include "lib.h"
 #include "Menu.h"
+#include "General.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -232,6 +233,7 @@ void eUsuario_baja(eUsuario listado[], int limite)
         else
         {
             eUsuario_mostrarListado(listado, limite);
+            //cambiar busqueda de id existente por funcion
             id = pedirInt("\n\nIngrese el ID a dar de baja: ");
 
             posicion = eUsuario_buscarPorId(listado, limite, id);
@@ -895,4 +897,47 @@ void eProducto_ordenar(eProducto listado[], int limite, char orden[])
 			}
 		}
 	}
+}
+
+void eVenta_alta(eVenta listadoProductos[], int limiteVentas, eUsuario listadoUsuarios[], int limiteUsuarios)
+{
+	eVenta registro;
+	char confirmacion;
+	int posicion;
+
+	posicion = eVenta_buscarLugarLibre(listadoProductos, limiteVentas);
+	if(posicion < 0)
+	{
+		imprimirEnPantalla("\nNo hay m s lugares disponibles para altas de Producto.");
+	}
+	else
+	{
+		ejecutarEnConsola(LIMPIAR_PANTALLA);
+		imprimirTitulo(PRODUCTO_TITULO_ALTA);
+
+		registro.idProducto = eVenta_pedirIdUsuario(listadoUsuarios, limiteUsuarios);
+		registro = eVenta_pedirIngreso(listadoProductos, limiteVentas);
+
+		eVenta_mostrarUno(registro);
+		confirmacion = pedirConfirmacion("Confirma que los datos ingresados son correctos?");
+
+		if(confirmacion == 'S')
+		{
+			listadoProductos[posicion] = registro;
+			eVenta_ordenar(listadoProductos, limiteVentas, "nombreAsc");
+			imprimirEnPantalla("\nEl Producto se dio de alta.");
+		}
+		else
+		{
+			imprimirEnPantalla("\nSe cancelà la gestiàn.");
+		}
+	}
+	ejecutarEnConsola(HACER_PAUSA);
+}
+
+
+void eVenta_alta(eVenta listadoVentas[], int limiteVentas, eVenta venta)
+{
+    int
+    eProducto_buscarLugarLibre(listadoVentas, limiteVentas);
 }

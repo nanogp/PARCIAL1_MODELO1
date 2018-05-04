@@ -60,6 +60,7 @@ int main()
     //ARRAYS DE ESTRUCTURAS
     eUsuario listadoUsuarios[USUARIO_NRO_MAX] = {};
     eProducto listadoProductos[PRODUCTO_NRO_MAX] = {};
+    eVenta listadoVentas[PRODUCTO_NRO_MAX] = {};
 
     //INCIALIZAR
     eUsuario_init(listadoUsuarios, USUARIO_NRO_MAX);

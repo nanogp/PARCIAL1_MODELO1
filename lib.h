@@ -93,5 +93,7 @@ typedef struct
     int idProducto;
 }eVenta;
 
+eVenta pedirVenta(eProducto listadoProductos[], int limiteProductos);
+void eVenta eVenta_alta(eVenta listadoVentas[], int limiteVentas, eVenta venta);
 
 #endif // LIB_H_INCLUDED

@@ -39,14 +39,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Menu.h" />
-		<Unit filename="Producto.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Producto.h" />
-		<Unit filename="Usuario.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Usuario.h" />
 		<Unit filename="lib.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

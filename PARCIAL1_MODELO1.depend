@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1525293842 source:d:\github\parcial1_modelo1\general.c
+	"General.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1525283521 d:\github\parcial1_modelo1\general.h
+
+1525467811 source:d:\github\parcial1_modelo1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"General.h"
+	"Menu.h"
+	"Usuario.h"
+	"Producto.h"
+
+1525463455 d:\github\parcial1_modelo1\menu.h
+
+1525467517 d:\github\parcial1_modelo1\usuario.h
+
+1525296503 source:d:\github\parcial1_modelo1\menu.c
+	<stdio.h>
+	"Menu.h"
+	"General.h"
+
+1525468009 source:d:\github\parcial1_modelo1\usuario.c
+	"Usuario.h"
+	"General.h"
+	"Menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1525470898 d:\github\parcial1_modelo1\producto.h
+	"Usuario.h"
+
+1525470945 source:d:\github\parcial1_modelo1\producto.c
+	"Producto.h"
+	"General.h"
+	"Menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
